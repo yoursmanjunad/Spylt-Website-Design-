@@ -30,6 +30,8 @@ const FlavorSlider = () => {
         ease: "power1.inOut",
       });
     }
+      //This calculates the scroll amount and helps to adjust the point according to the screen size.
+      // This enables us to fake the horizontal scroling
 
     const titleTl = gsap.timeline({
       scrollTrigger: {
@@ -52,7 +54,7 @@ const FlavorSlider = () => {
           ease: "power1.inOut",
         },
         "<"
-      )
+      ) 
       .to(
         ".second-text-split",
         {

@@ -7,16 +7,19 @@ import MessageSection from "./sections/MessageSection";
 import FlavourSection from "./sections/FlavourSection";
 import { useGSAP } from "@gsap/react";
 import NutritionSection from "./sections/NutritionSection";
+import BenifitSection from "./sections/BenifitSection";
+
+// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
 const App = () => {
-  const App = () => {
-    useGSAP(() => {
-      ScrollSmoother.create({
-        smooth: 3,
-        effects: true,
-      });
+  useGSAP(() => {
+    ScrollSmoother.create({
+      smooth: 3,
+      effects: true,
     });
-  };
+  }, []);
+
   return (
     <main>
       <NavBar />
@@ -26,6 +29,7 @@ const App = () => {
           <MessageSection />
           <FlavourSection />
           <NutritionSection />
+          <BenifitSection />
           <div className="h-dvh border border-red-500" />
         </div>
       </div>
